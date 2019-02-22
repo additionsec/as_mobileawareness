@@ -1,0 +1,54 @@
+# name <tab> flag
+
+# combinable flags, common to all sections:
+APF	1
+GCT	2
+HT	4
+PGA	8
+EMU	16
+DBG	32
+ATT	64
+ATD	128
+NP	256
+SEF	512
+# X	1024
+
+
+# NOTE: reserve 2048 - 16384 for special section meaning
+
+# 0x8000 must be reserved, it has special meaning
+#RESERVED	32768
+
+# extended flags, not combinable, common to all sections
+# NOTE: PROPCONTAINS for properties section overrides one,
+# but it's never treated as a type flag
+SS2	65536
+TEST	131072
+AV	262144
+EMM	524288
+SS	1048576
+# X	2097152
+MAL	4194304
+CERT	8388608
+ROOT	16777216
+
+
+# for env strings section
+BOOTCLASS	16384
+ENVEXIST	8192
+LDLIBPATH	4096
+LDPRELOAD	2048
+
+# for symbols section
+SYMJAVACLASS	16384
+SYMNATIVE	8192
+
+# for proxy section
+PROXY	1
+
+# for properties section
+PROPCONTAINS	65536
+PROPEXIST	16384
+PROPVALNOT1	8192
+PROPVALNOT0	4096
+PROPCONTAINSCHILD	2048

@@ -1,0 +1,36 @@
+# FLAGS <tab> ID <tab> strstr
+
+# xpose files (match w/ pkgs)
+ATT	73	XposedBridge.jar
+
+# substrate
+ATD	9	.cy.so
+ATT	9	libsubstrate.so
+ATT	9	libsubstrate-dvm.so
+ATT	9	libsubstrate-art.so
+ATT	9	libAndroidBootstrap0.so
+
+# cheat engine
+GCT	106	libceserver-extension.so
+
+# root cloak plus
+ATD	108	librootcloakplus.cy.so
+
+# frida
+ATD	21	frida-agent-32.so
+ATD	21	frida-agent-64.so
+ATD	21	re.frida.server
+
+# introspy
+ATD	21	com.introspy.core
+
+# emulators
+EMU	93	/system/lib/hw/gralloc.goldfish.so
+EMU	93	/system/lib/hw/gralloc.ranchu.so
+EMU	91	/system/lib/hw/gralloc.vbox86.so
+EMU	98	/system/lib/hw/gralloc.nox.so
+
+# misc
+ATD	78	/data/local/tmp/
+
+

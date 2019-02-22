@@ -1,0 +1,5 @@
+release/
+build/
+.DS_Store
+tools/seeder
+.idea

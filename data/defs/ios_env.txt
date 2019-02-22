@@ -1,0 +1,11 @@
+#
+# DYLDLIB: things to strstr in DYLD_INSERT_LIBRARIES
+# ENVEXIST: the env var matches the full string
+#
+
+# substrate stuff
+DYLDLIB|ATT|ROOT	9	MobileSubstrate
+ENVEXIST|ATT|ROOT	9	_MSSafeMode
+
+
+

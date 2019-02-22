@@ -1,0 +1,173 @@
+# FLAGS <tab> ID <tab> File
+
+# Assumes /system/ prefix, unless it starts with / (absolute)
+# SPECIAL: the base path ("/system/" in this case) must be the
+# first path
+HT	0	/system/
+
+
+# Su-related files (they are all id 601, to match pkgs)
+PGA	7	bin/su
+PGA	7	bin/sudo
+PGA	7	bin/su-backup
+PGA	7	bin/daemonsu
+PGA	7	bin/.ext/.su
+PGA	7	etc/.installed_su_daemon
+PGA	7	etc/init.d/99SuperSUDaemon
+PGA	7	bacon
+PGA	7	su-backup
+PGA	7	usr/we-need-root/su-backup
+PGA|EMU	7	/dev/com.genymotion.superuser.daemon/
+PGA	7	xbin/su
+PGA	7	xbin/sudo
+PGA	7	xbin/su-backup
+PGA	7	xbin/daemonsu
+PGA	7	/sbin/su
+
+# KingRoot artifacts
+PGA	113	bin/.usr/.ku
+ROOT	113	bin/.krsh
+ROOT	113	bin/install-recovery.sh-ku.bak
+ROOT	113	xbin/ku.sud
+ROOT	113	xbin/krdem
+ROOT	113	usr/iku/isu
+ROOT	113	usr/icu/icusuflag.conf
+
+
+# Root hiding files (match w/ pkgs)
+SS2	75	xbin/hmrp
+SS2	75	xbin/hmrh
+SS2	75	xbin/amphoras
+SS2	75	bin/hmrp
+SS2	75	bin/hmrh
+SS2	75	bin/amphoras
+
+# xpose files (match w/ pkgs)
+ATT	73	bin/app_process.orig
+ATT	73	xposed.prop
+ATT	73	/data/xposed/
+#ATT	73	/data/xposed/XposedBridge.jar
+ATT	73	/data/data/de.robv.android.xposed.installer/
+# https://forums.oneplus.net/threads/if-i-have-xposed-can-i-install-updates.316969/
+# https://gist.github.com/adumont/c30ec35cffb3ad565db5
+ATT	73	bin/app_process32_xposed
+ATT	73	bin/app_process64_xposed
+ATT	73	bin/dex2oat.orig
+ATT	73	lib/libart.so.orig
+ATT	73	lib/libxposed_art.so
+
+
+# substrate files (match w/ pkgs)
+ATT	9	/data/data/com.saurik.substrate/
+#ATT	9	/data/data/com.saurik.substrate/permitted.list
+ATT	9	lib/libsubstrate.so
+#ATT	9	lib/libsubstrate-dvm.so
+#ATT	9	lib/libsubstrate-art.so
+ATT	9	/data/app-lib/com.saurik.substrate-1/
+ATT	9	/data/app-lib/com.saurik.substrate-2/
+
+# dexspy (match w/ pkgs)
+ATT	76	/data/miui/DexspyInstaller.jar
+
+# Frida cheesy "taking the directions too literal" catch
+ATT	26	/data/local/tmp/frida-server
+ATT	26	/data/local/tmp/re.frida.server/
+
+# ditto gdb
+ATT	30	/data/local/tmp/gdbserver
+ATT	30	xbin/gdbserver
+# Droid4x actually ships this:
+ATT	30	bin/gdbserver
+
+# lucky patcher
+APF|GCT	70	/data/lp/lp_utils
+
+# magisk
+SS	118	/magisk/
+SS	118	/sbin/magic_mask.sh
+SS	118	/sbin/magiskpolicy
+PGA	118	/magisk/.core/bin/su
+SS2	118	/magisk/.core/magiskhide/
+
+
+
+# emulator files
+# ID=90 Bluestacks
+# ID=91 vbox
+# ID=92 genymotion
+# ID=93 qemu
+# ID=94 androvm
+# ID=95 Aliyun (quasi-android)
+EMU	94	bin/androVM-prop
+EMU	94	bin/androVM-vbox-sf
+EMU	92	bin/genybaseband
+EMU	92	bin/genyd
+EMU	91	bin/genymotion-vbox-sf
+EMU	91	bin/mount.vboxsf
+EMU	90	bin/bstcmd_shim
+EMU	90	bin/bstshutdown
+EMU	90	bin/bstfolderd
+EMU	94	etc/init.androVM.sh
+EMU	91	lib/vboxguest.ko
+EMU	91	lib/vboxsf.ko
+EMU	90	lib/libbstfolder_jni.so
+EMU	90	lib/hw/gralloc.bst.so
+EMU	91	lib/hw/gralloc.vbox86.so
+EMU	91	/dev/vboxuser
+EMU	91	/dev/vboxguest
+EMU	90	/dev/bstacce
+EMU	92	/dev/socket/genyd
+EMU	90	/dev/socket/bstfolderd
+EMU	91	/fstab.vbox86
+EMU	91	/init.vbox86.rc
+EMU	91	/ueventd.vbox86.rc
+EMU	93	/sys/qemu_trace/state
+EMU	93	/sys/class/misc/goldfish_pipe
+EMU	93	/dev/goldfish_pipe
+EMU	93	/dev/qemu_pipe
+EMU	93	/sys/module/goldfish_audio
+EMU	92	app/GenymotionLayout/
+EMU	90	/proc/bstid
+EMU	90	priv-app/BsdFolder.apk
+EMU	95	framework/core.jar.jex
+EMU	96	bin/andy-prop
+EMU	96	bin/andy-vbox-sf
+EMU	96	/ueventd.andy.rc
+EMU	97	/ueventd.duos.rc
+EMU	97	bin/suondemand.sh
+EMU	98	/ueventd.nox.rc
+PGA|EMU	98	xbin/noxsu
+EMU	98	bin/enable_nox
+EMU	98	bin/nox-vbox-sf
+EMU	98	bin/nox
+EMU	98	bin/noxd
+EMU	98	bin/shellnox
+EMU	99	bin/microvirt-prop
+EMU	99	bin/microvirtd
+EMU	99	bin/memud
+EMU	117	bin/droid4x
+EMU	117	lib/libdroid4x.so
+
+
+# STF
+TEST	77	/data/local/tmp/minicap
+TEST	77	/data/local/tmp/minicap.so
+TEST	77	/data/local/tmp/miniref
+TEST	77	/data/local/tmp/minirev
+TEST	77	/data/local/tmp/minitouch
+TEST	77	/data/local/tmp/STFService.apk
+
+# cheat engine
+GCT	106	/data/local/tmp/ceserver
+GCT	106	/data/local/tmp/libceserver-extension.so
+GCT	106	/data/ceserver/ceserver
+GCT	106	/system/xbin/ceserver
+
+
+# system apps
+#app/superuser.apk (case)
+#priv-app/superuser.apk (case)
+#app/superuser/ (case)
+#app/priv-app/superuser/ (case)
+
+

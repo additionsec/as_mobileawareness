@@ -1,0 +1,11 @@
+
+Build everything
+
+Then run:
+BUILD_BASE=~/as/ sh _process_symbols.sh
+
+This produces syms.input of all symbols in core .a files
+
+Next run perl _sym_rename.pl syms.input > syms.txt to generate a syms.txt file
+
+Rebuild, it will use the sys.txt for renaming in the embedded version

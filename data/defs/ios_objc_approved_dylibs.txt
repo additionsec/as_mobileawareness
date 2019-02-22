@@ -1,0 +1,189 @@
+#
+# Dylibs that are allowed/approved for Objc IMP implementations,
+# as reported by dladdr
+#
+
+# NOTE: flags don't matter, they are not used. This is based on existance and the IDs.
+
+# 1 - libc/platform type stuff
+SS	1	/usr/lib/system/libsystem_kernel.dylib
+SS	1	/usr/lib/system/libsystem_c.dylib
+SS	1	/usr/lib/system/libsystem_pthread.dylib
+SS	1	/usr/lib/system/libsystem_malloc.dylib
+SS	1	/usr/lib/system/libsystem_platform.dylib
+
+# 2 - crypto (libcomonCrypto)
+SS	2	/usr/lib/system/libcommonCrypto.dylib
+SS	2	/usr/lib/system/libcorecrypto.dylib
+
+# 3 - Core ObjC
+SS	3	/usr/lib/libobjc.A.dylib
+SS	3	/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+
+# 4 - network
+SS	4	/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+SS	4	/usr/lib/system/libsystem_network.dylib
+SS	4	/usr/lib/libnetwork.dylib
+
+# 5 - Security
+SS	5	/System/Library/Frameworks/Security.framework/Security
+SS	5	/usr/lib/system/libsystem_coretls.dylib
+SS	5	/usr/lib/libcoretls.dylib
+SS	5	/usr/lib/libcoretls_cfhelpers.dylib
+
+
+# Misc - not categorized
+SS	0	/System/Library/Frameworks/UIKit.framework/UIKit
+SS	0	/System/Library/PrivateFrameworks/CoreUI.framework/CoreUI
+SS	0	/System/Library/PrivateFrameworks/WebKitLegacy.framework/WebKitLegacy
+SS	0	/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+SS	0	/System/Library/PrivateFrameworks/WebCore.framework/WebCore
+SS	0	/System/Library/Frameworks/CoreImage.framework/CoreImage
+SS	0	/System/Library/PrivateFrameworks/Quagga.framework/Quagga
+SS	0	/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+SS	0	/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+SS	0	/System/Library/Frameworks/VideoToolbox.framework/VideoToolbox
+SS	0	/System/Library/PrivateFrameworks/CoreBrightness.framework/CoreBrightness
+SS	0	/System/Library/Frameworks/CoreMedia.framework/CoreMedia
+SS	0	/usr/lib/libAccessibility.dylib
+SS	0	/System/Library/PrivateFrameworks/SpringBoardServices.framework/SpringBoardServices
+SS	0	/System/Library/PrivateFrameworks/DictionaryServices.framework/DictionaryServices
+SS	0	/System/Library/Frameworks/MediaAccessibility.framework/MediaAccessibility
+SS	0	/System/Library/PrivateFrameworks/FrontBoardServices.framework/FrontBoardServices
+SS	0	/System/Library/PrivateFrameworks/TextInput.framework/TextInput
+SS	0	/System/Library/PrivateFrameworks/MobileAsset.framework/MobileAsset
+SS	0	/System/Library/Frameworks/CoreText.framework/CoreText
+SS	0	/System/Library/Frameworks/CoreTelephony.framework/CoreTelephony
+SS	0	/System/Library/PrivateFrameworks/BackBoardServices.framework/BackBoardServices
+SS	0	/System/Library/PrivateFrameworks/FontServices.framework/FontServices
+SS	0	/System/Library/PrivateFrameworks/UserNotificationServices.framework/UserNotificationServices
+SS	0	/System/Library/PrivateFrameworks/AssertionServices.framework/AssertionServices
+SS	0	/System/Library/PrivateFrameworks/AppSupport.framework/AppSupport
+SS	0	/System/Library/PrivateFrameworks/PhysicsKit.framework/PhysicsKit
+SS	0	/System/Library/PrivateFrameworks/FaceCore.framework/FaceCore
+SS	0	/System/Library/Frameworks/MetalPerformanceShaders.framework/MetalPerformanceShaders
+SS	0	/usr/lib/libcupolicy.dylib
+SS	0	/System/Library/Frameworks/CoreAudio.framework/CoreAudio
+SS	0	/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+SS	0	/System/Library/Frameworks/ImageIO.framework/ImageIO
+SS	0	/System/Library/PrivateFrameworks/BaseBoard.framework/BaseBoard
+SS	0	/System/Library/PrivateFrameworks/GraphicsServices.framework/GraphicsServices
+SS	0	/usr/lib/libMobileGestaltExtensions.dylib
+SS	0	/System/Library/PrivateFrameworks/UserManagement.framework/UserManagement
+SS	0	/System/Library/PrivateFrameworks/HangTracer.framework/HangTracer
+SS	0	/System/Library/Frameworks/JavaScriptCore.framework/JavaScriptCore
+SS	0	/System/Library/PrivateFrameworks/ProofReader.framework/ProofReader
+SS	0	/System/Library/PrivateFrameworks/UserFS.framework/UserFS
+SS	0	/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+SS	0	/System/Library/Frameworks/Metal.framework/Metal
+SS	0	/System/Library/PrivateFrameworks/CommonUtilities.framework/CommonUtilities
+SS	0	/usr/lib/libTelephonyUtilDynamic.dylib
+SS	0	/System/Library/PrivateFrameworks/PowerLog.framework/PowerLog
+SS	0	/System/Library/PrivateFrameworks/AggregateDictionary.framework/AggregateDictionary
+SS	0	/System/Library/PrivateFrameworks/CrashReporterSupport.framework/CrashReporterSupport
+SS	0	/usr/lib/liblockdown.dylib
+SS	0	/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+SS	0	/System/Library/Frameworks/OpenGLES.framework/libGFXShared.dylib
+SS	0	/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+SS	0	/System/Library/Frameworks/Foundation.framework/Foundation
+SS	0	/System/Library/PrivateFrameworks/IOAccelerator.framework/IOAccelerator
+SS	0	/System/Library/PrivateFrameworks/AppleJPEG.framework/AppleJPEG
+SS	0	/System/Library/PrivateFrameworks/MobileKeyBag.framework/MobileKeyBag
+SS	0	/System/Library/PrivateFrameworks/IOMobileFramebuffer.framework/IOMobileFramebuffer
+SS	0	/System/Library/PrivateFrameworks/IOSurfaceAccelerator.framework/IOSurfaceAccelerator
+SS	0	/System/Library/Frameworks/OpenGLES.framework/libGLImage.dylib
+SS	0	/System/Library/PrivateFrameworks/IOSurface.framework/IOSurface
+SS	0	/System/Library/Frameworks/Accelerate.framework/Accelerate
+SS	0	/usr/lib/libMobileGestalt.dylib
+SS	0	/System/Library/PrivateFrameworks/CoreServicesInternal.framework/CoreServicesInternal
+SS	0	/usr/lib/libxslt.1.dylib
+SS	0	/System/Library/PrivateFrameworks/ColorSync.framework/ColorSync
+SS	0	/System/Library/PrivateFrameworks/LanguageModeling.framework/LanguageModeling
+SS	0	/System/Library/PrivateFrameworks/FontServices.framework/libFontParser.dylib
+SS	0	/System/Library/Frameworks/OpenGLES.framework/libCVMSPluginSupport.dylib
+SS	0	/System/Library/PrivateFrameworks/TCC.framework/TCC
+SS	0	/System/Library/PrivateFrameworks/MobileSystemServices.framework/MobileSystemServices
+SS	0	/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/vecLib
+SS	0	/usr/lib/libextension.dylib
+SS	0	/usr/lib/libarchive.2.dylib
+SS	0	/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+SS	0	/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+SS	0	/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libvDSP.dylib
+SS	0	/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libLinearAlgebra.dylib
+SS	0	/usr/lib/libxml2.2.dylib
+SS	0	/usr/lib/libmarisa.dylib
+SS	0	/System/Library/PrivateFrameworks/GPUCompiler.framework/libmetal_timestamp.dylib
+SS	0	/System/Library/Frameworks/OpenGLES.framework/libCoreFSCache.dylib
+SS	0	/System/Library/Frameworks/OpenGLES.framework/libCoreVMClient.dylib
+SS	0	/System/Library/Frameworks/Accelerate.framework/Frameworks/vImage.framework/vImage
+SS	0	/usr/lib/libCRFSuite.dylib
+SS	0	/usr/lib/libicucore.A.dylib
+SS	0	/usr/lib/libcompression.dylib
+SS	0	/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libSparseBLAS.dylib
+SS	0	/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libLAPACK.dylib
+SS	0	/System/Library/Frameworks/Accelerate.framework/Frameworks/vImage.framework/Libraries/libCGInterfaces.dylib
+SS	0	/usr/lib/libc++.1.dylib
+SS	0	/usr/lib/libcmph.dylib
+SS	0	/usr/lib/libiconv.2.dylib
+SS	0	/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libvMisc.dylib
+SS	0	/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libBLAS.dylib
+SS	0	/usr/lib/liblangid.dylib
+SS	0	/usr/lib/liblzma.5.dylib
+SS	0	/usr/lib/libbz2.1.0.dylib
+SS	0	/usr/lib/libsqlite3.dylib
+SS	0	/usr/lib/libenergytrace.dylib
+SS	0	/usr/lib/libbsm.0.dylib
+SS	0	/usr/lib/libz.1.dylib
+SS	0	/usr/lib/libc++abi.dylib
+SS	0	/usr/lib/libSystem.B.dylib
+SS	0	/usr/lib/system/libsystem_coreservices.dylib
+SS	0	/usr/lib/system/libsystem_containermanager.dylib
+SS	0	/usr/lib/system/libcopyfile.dylib
+SS	0	/usr/lib/system/libsystem_networkextension.dylib
+SS	0	/usr/lib/system/libsystem_info.dylib
+SS	0	/usr/lib/system/libvminterpose.dylib
+SS	0	/usr/lib/system/libsystem_dnssd.dylib
+SS	0	/usr/lib/system/libsystem_configuration.dylib
+SS	0	/usr/lib/system/libsystem_asl.dylib
+SS	0	/usr/lib/system/libsystem_trace.dylib
+SS	0	/usr/lib/system/libsystem_notify.dylib
+SS	0	/usr/lib/system/liblaunch.dylib
+SS	0	/usr/lib/system/libxpc.dylib
+SS	0	/usr/lib/system/libsystem_sandbox.dylib
+SS	0	/usr/lib/system/libcache.dylib
+SS	0	/usr/lib/system/libdispatch.dylib
+SS	0	/usr/lib/system/libunwind.dylib
+SS	0	/usr/lib/system/libsystem_blocks.dylib
+SS	0	/usr/lib/system/libremovefile.dylib
+SS	0	/usr/lib/system/libmacho.dylib
+SS	0	/usr/lib/system/libkeymgr.dylib
+SS	0	/usr/lib/system/libsystem_m.dylib
+SS	0	/usr/lib/system/libcompiler_rt.dylib
+SS	0	/System/Library/PrivateFrameworks/FontServices.framework/libGSFontCache.dylib
+SS	0	/System/Library/PrivateFrameworks/ConstantClasses.framework/ConstantClasses
+SS	0	/System/Library/PrivateFrameworks/NLP.framework/NLP
+SS	0	/System/Library/PrivateFrameworks/DataDetectorsCore.framework/DataDetectorsCore
+SS	0	/System/Library/PrivateFrameworks/TextureIO.framework/TextureIO
+SS	0	/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/WirelessDiagnostics
+SS	0	/usr/lib/libAWDSupportFramework.dylib
+SS	0	/System/Library/Frameworks/UserNotifications.framework/UserNotifications
+SS	0	/System/Library/PrivateFrameworks/ProtocolBuffer.framework/ProtocolBuffer
+SS	0	/System/Library/PrivateFrameworks/AppleFSCompression.framework/AppleFSCompression
+SS	0	/System/Library/PrivateFrameworks/CoreEmoji.framework/CoreEmoji
+SS	0	/usr/lib/libate.dylib
+SS	0	/usr/lib/libFosl_dynamic.dylib
+SS	0	/usr/lib/libprotobuf.dylib
+SS	0	/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libBNNS.dylib
+SS	0	/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libQuadrature.dylib
+SS	0	/usr/lib/libpcap.A.dylib
+SS	0	/usr/lib/system/libsystem_symptoms.dylib
+SS	0	/usr/lib/system/libdyld.dylib
+SS	0	/System/Library/PrivateFrameworks/FontServices.framework/libTrueTypeScaler.dylib
+SS	0	/System/Library/PrivateFrameworks/OpenCL.framework/OpenCL
+SS	0	/System/Library/PrivateFrameworks/CoreDuet.framework/CoreDuet
+SS	0	/System/Library/PrivateFrameworks/CoreDuetDaemonProtocol.framework/CoreDuetDaemonProtocol
+SS	0	/System/Library/PrivateFrameworks/CoreDuetDebugLogging.framework/CoreDuetDebugLogging
+SS	0	/usr/lib/system/libsystem_stats.dylib
+SS	0	/System/Library/Frameworks/CoreGraphics.framework/Resources/libCGXType.A.dylib
+SS	0	/System/Library/Frameworks/CoreGraphics.framework/Resources/libRIP.A.dylib
+SS	0	/System/Library/Frameworks/CoreGraphics.framework/Resources/libCMSBuiltin.A.dylib

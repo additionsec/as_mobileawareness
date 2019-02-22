@@ -1,0 +1,19 @@
+# flags <tab> id <tab> string <tab> notes
+
+########## JAVA SYMS #################
+# NOTE: keep them in FindClass format, i.e. com/additionsecurity/app/MainActivity
+
+# https://github.com/pjlantz/droidbox/blob/master/APIMonitor/apkil/monitor.py
+SYMJAVACLASS|ATD	108	droidbox/apimonitor/Helper
+
+
+######## NATIVE SYMS #############
+
+#SYMNATIVE|ATT	9	_MSHookFunction	Substrate
+#SYMNATIVE|ATT	9	MSHookFunction	Substrate
+
+
+######## TESTING #################
+
+#SYMJAVACLASS|ATT	0	com/additionsecurity/app/MainActivity
+#SYMNATIVE|ATT	0	_Z25dvmDbgIsDebuggerConnectedv

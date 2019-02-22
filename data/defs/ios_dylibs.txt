@@ -1,0 +1,48 @@
+
+# NOTE: everything here is lowercase!
+
+#http://apt.saurik.com/cydia/debs/5011/Library/Frameworks/CydiaSubstrate.framework/
+ROOT|ATT	9	mobilesubstrate
+ROOT|ATT	9	cydiasubstrate
+ROOT|ATT	9	substrateloader
+ROOT|ATD	9	libsubstrate
+
+ROOT|ATD	21	introspy
+ROOT|ATD	22	sslkillswitch
+ROOT|ATD	23	ispy.dylib
+
+ROOT|ATD	10	libcycrypt	Cycript
+ROOT|ATD	10	libcycript	Cycript
+
+# https://build.frida.re/frida/ios/lib/
+ATD	26	fridagadget.dylib
+
+DBG	54	libbacktracerecording.dylib
+DBG	54	libviewdebuggersupport.dylib
+
+ATD	24	snoopitweak
+DBG	25	ponydebuggerinjected
+ATD	26	frida-agent
+
+ATD	15	simulatedkeyevents.dylib
+
+# xmodgames
+GCT|ATD	55	xmdanmuplugin.dylib
+GCT|ATD	55	xmhelper.dylib
+GCT|ATD	55	xmscreenshot.dylib
+GCT|ATD	55	xmscreenshotex.dylib
+GCT|ATD	55	xmspecial.dylib
+
+# gamegem
+GCT|ATD	56	speedoptimize.dylib
+
+# iap stuff
+IAP|ATD	58	localiapstore.dylib
+IAP|ATD	58	iap.dylib
+
+# development image stuff
+DEV	59	/developer/
+
+
+# for testing:
+#HT	0	libobjc.a.dylib

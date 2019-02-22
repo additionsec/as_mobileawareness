@@ -1,0 +1,71 @@
+# flags <tab> id <tab> string <tab> notes
+
+########## OBJC SYMS #################
+
+# https://github.com/iSECPartners/Introspy-iOS/tree/master/src
+SYM_OBJC_CLASS|ATD	21	CommonCryptorHooks	Introspy
+SYM_OBJC_CLASS|ATD	21	NSFileManagerHooks	Introspy
+SYM_OBJC_CLASS|ATD	21	CallStackInspector	Introspy
+SYM_OBJC_CLASS|ATD	21	CallTracer	Introspy
+
+SYM_OBJC_CLASS|ATD	24	SnoopiTweak	Snoopit
+SYM_OBJC_CLASS|ATD	24	SnoopiServer	Snoopit
+
+# https://github.com/square/PonyDebugger/tree/master/ObjC/PonyDebugger
+SYM_OBJC_CLASS|DBG	25	PDDebugger	PonyDebugger
+
+# https://github.com/dtrukr/PonyDebuggerInjected
+SYM_OBJC_CLASS|DBG	25	PonyDebuggerInjectedController	PonyDebugger
+
+# https://github.com/Flipboard/FLEX
+SYM_OBJC_CLASS|ATD	32	FLEXObjectExplorerFactory	FLEX
+SYM_OBJC_CLASS|ATD	32	FLEXRuntimeUtility	FLEX
+SYM_OBJC_CLASS|ATD	32	FLEXManager	FLEX
+
+# https://github.com/johnno1962/Xtrace
+SYM_OBJC_CLASS|ATD|DBG	33	Xtrace	Xtrace
+
+# https://github.com/BishopFox/iSpy/blob/master/iSpy.class.xm
+SYM_OBJC_CLASS|ATD	23	iSpy	iSpy
+
+# http://gitweb.saurik.com/cycript.git/blob/HEAD:/cycript0.9/com/saurik/substrate/MS.cy
+SYM_OBJC_CLASS|SYM_NATIVE|ATD	10	CYHandleServer
+SYM_OBJC_CLASS|ATD	10	CYClient_	Cycrypt
+SYM_OBJC_CLASS|ATD	10	CYJSArray	Cycrypt
+SYM_OBJC_CLASS|ATD	10	CYInternal	Cycrypt
+
+https://github.com/heardrwt/RHObjectiveBeagleLoader/blob/master/RHObjectiveBeagleLoader.m
+SYM_OBJC_CLASS|ATD	34	RHObjectiveBeagleAdditions	Beagle
+# https://github.com/heardrwt/RHObjectiveBeagle/blob/master/RHObjectiveBeagle.m
+SYM_OBJC_CLASS|ATD	34	RHBeaglePassthroughAdditions	Beagle
+
+
+######## NATIVE SYMS #############
+
+SYM_NATIVE|ATD	9	_MSHookFunction	Substrate
+SYM_NATIVE|ATD	9	MSHookFunction	Substrate
+SYM_NATIVE|ATD	9	_MSFindSymbol	Substrate
+SYM_NATIVE|ATD	9	MSFindSymbol	Substrate
+SYM_NATIVE|ATD	9	_MSHookMessageEx	Substrate
+SYM_NATIVE|ATD	9	MSHookMessageEx	Substrate
+
+# https://github.com/BishopFox/iSpy/blob/master/iSpy.msgSend.xm
+SYM_NATIVE|ATD	23	_bf_hook_msgSend	iSpy
+SYM_NATIVE|ATD	23	bf_hook_msgSend	iSpy
+
+# https://github.com/frida/frida
+# TODO
+# SYM_NATIVE|ATT	26	_frida_agent_main	Frida
+
+# https://github.com/heardrwt/RHObjectiveBeagle/blob/master/RHObjectiveBeagle.m
+SYM_NATIVE|ATD	34	_beagle_getInstancesOfClass	Beagle
+SYM_NATIVE|ATD	34	beagle_getInstancesOfClass	Beagle
+
+# fishhook: https://github.com/facebook/fishhook/blob/master/fishhook.c
+SYM_NATIVE|ATD	50	rebind_symbols	Fishhook
+SYM_NATIVE|ATD	50	_rebind_symbols	Fishhook
+
+
+# for testing
+#SYM_OBJC_CLASS	0	AppDelegate
+#SYM_NATIVE	0	AS_Initialize

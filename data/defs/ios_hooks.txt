@@ -1,0 +1,77 @@
+
+# these are not in older IOS; we need to do a runtime check for them
+#ATD	0	openat
+#ATD	0	fstatat
+#ATD	0	faccessat
+
+# NOTE: IDs match against ios_approved_dylibs IDs
+
+# Libc hook points
+SYM_NATIVE|ATD	1	open
+SYM_NATIVE|ATD	1	fopen
+SYM_NATIVE|ATD	1	read
+SYM_NATIVE|ATD	1	pread
+SYM_NATIVE|ATD	1	write
+SYM_NATIVE|ATD	1	pwrite
+SYM_NATIVE|ATD	1	stat
+SYM_NATIVE|ATD	1	lstat
+SYM_NATIVE|ATD	1	access
+SYM_NATIVE|ATD	1	connect
+SYM_NATIVE|ATD	1	send
+SYM_NATIVE|ATD	1	recv
+SYM_NATIVE|ATD	1	syscall
+SYM_NATIVE|ATD	1	sysctl
+SYM_NATIVE|ATD	1	sysctlbyname
+SYM_NATIVE|ATD	1	mmap
+
+# Objc runtime points
+SYM_NATIVE|ATD	3	sel_getUid
+SYM_NATIVE|ATD	3	objc_getClass
+SYM_NATIVE|ATD	3	objc_msgSend
+SYM_NATIVE|ATD	3	objc_copyImageNames
+SYM_NATIVE|ATD	3	class_replaceMethod
+SYM_NATIVE|ATD	3	class_getMethodImplementation
+SYM_NATIVE|ATD	3	method_getImplementation
+SYM_NATIVE|ATD	3	method_setImplementation
+SYM_NATIVE|ATD	3	method_exchangeImplementations
+
+
+# Keychain & security hook points
+SYM_NATIVE|ATD	5	SecItemCopyMatching
+SYM_NATIVE|ATD	5	SecItemUpdate
+SYM_NATIVE|ATD	5	SecItemAdd
+SYM_NATIVE|ATD	5	SecItemDelete
+SYM_NATIVE|ATD	5	SecRandomCopyBytes
+SYM_NATIVE|ATD	5	SecKeyRawVerify
+
+# Common crypto hook points
+SYM_NATIVE|ATD	2	CCCrypt
+SYM_NATIVE|ATD	2	CCHmac
+SYM_NATIVE|ATD	2	CC_SHA512_Final
+SYM_NATIVE|ATD	2	CC_SHA256_Final
+SYM_NATIVE|ATD	2	CC_SHA256_Update
+SYM_NATIVE|ATD	2	CC_SHA1_Final
+SYM_NATIVE|ATD	2	CC_SHA1_Update
+SYM_NATIVE|ATD	2	CC_MD5_Final
+
+# SSL pinning hook points
+SYM_NATIVE|ATD	5	SSLHandshake
+SYM_NATIVE|ATD	5	SSLCopyPeerTrust
+SYM_NATIVE|ATD	5	SecTrustEvaluate
+SYM_NATIVE|ATD	5	SSLCreateContext
+SYM_NATIVE|ATD	5	SSLSetSessionOption
+SYM_NATIVE|ATD	5	SSLSetIOFuncs
+SYM_NATIVE|ATD	5	SSLRead
+SYM_NATIVE|ATD	5	SSLWrite
+
+# Proxy hook points
+SYM_NATIVE|ATD	4	CFNetworkCopySystemProxySettings
+SYM_NATIVE|ATD	4	CFNetworkCopyProxiesForURL
+
+# Some lucrative hook points
+SYM_NATIVE|ATD	3	CFBundleGetMainBundle
+SYM_NATIVE|ATD	3	CFBundleGetIdentifier
+
+
+SYM_OBJC_CLASS|ATD	3	NSBundle.mainBundle
+SYM_OBJC_CLASS|ATD	3	NSFileManager.fileExistsAtPath

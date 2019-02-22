@@ -1,0 +1,261 @@
+# FLAGS <tab> ID <tab> File <tab> notes
+
+# SEF = security expectation failure
+
+# IDS:
+# 7 = general rooted file
+# 8 = cydia (store, apt, app management)
+# 9 = substrate (i.e. the app tampering stuff)
+# 10 = cycript
+# 11 = misc root-needing app (signals rooted)
+# 12 = clutch
+# 13 = misc malware
+# 14 = misc jailbreaking app
+# 15 = misc ATT tool
+# 16 = pangu jailbreaks
+# 17 = taig jailbreaks
+# 18 = evasi0n jailbreaks
+# 19 = xcon (root hiding)
+# 20 = blackr4in jailbreaks
+
+
+
+# Assumes /Applications/ prefix, unless it starts with / (absolute)
+# SPECIAL: the base path ("/Applications/" in this case) must be the
+# first path
+#
+# NOTE NOTE NOTE: AS OF VERSION 1.2, IOS doesn't use faccessat anymore
+# for IOS7 compatibility.  We still leave this first path in here,
+# but all paths must be absolute now.
+#
+# NOTE2: IOS10 doesn't allow opening /Applications/ anymore, so we switched
+# it to /Library/
+#ROOT	0	/Applications/
+ROOT	0	/Library/
+
+# these all need fixup, just for testing fo now:
+
+# https://github.com/sat2eesh/ios-jailBroken/blob/master/JBroken.m
+# https://github.com/Shmoopi/AntiPiracy/blob/master/SFAntiPiracy.h#L140
+# Manual review on jailbroken device
+ROOT	8	/Applications/Cydia.app
+ROOT	8	/.cydia_no_stash
+ROOT|SS	20	/Applications/blackra1n.app
+ROOT|SS	18	/Applications/evasion 7.app
+# TODO: pangu app?
+
+# these are popular cydia apps, which imply cydia/root
+ROOT	11	/Applications/FakeCarrier.app
+ROOT	11	/Applications/Icy.app
+ROOT	11	/Applications/IntelliScreen.app
+ROOT	11	/Applications/MxTube.app
+ROOT	11	/Applications/RockApp.app
+ROOT	11	/Applications/SBSettings.app
+ROOT	11	/Applications/WinterBoard.app
+ROOT	11	/Applications/HelloPython.app
+
+ROOT	11	/Library/PreferenceLoader/Preferences/CydgetSettings.plist
+ROOT	11	/System/Library/LockCydgets
+
+ROOT	8	/System/Library/LaunchDaemons/com.saurik.Cydia.Startup.plist
+ROOT	8	/private/var/lib/apt/
+ROOT	8	/private/var/lib/cydia/
+ROOT	11	/private/var/mobileLibrary/SBSettingsThemes/
+ROOT	8	/private/var/tmp/cydia.log
+ROOT	8	/private/var/stash/
+ROOT	8	/usr/libexec/cydia/
+
+# http://apt.saurik.com/cydia/debs/6101/usr/bin/
+ROOT|ATT	9	/usr/libexec/substrate
+ROOT|ATT	9	/usr/bin/cycc
+ROOT|ATT	9	/usr/bin/cynject
+ROOT|ATT	9	/usr/lib/libsubstrate.dylib
+ROOT|ATT	9	/usr/lib/libsubstrate.0.dylib
+ROOT|SEF	7	/usr/bin/sshd
+ROOT|SEF	7	/usr/sbin/sshd
+ROOT|SEF	7	/etc/ssh
+ROOT|SEF	7	/etc/ssh/sshd_config
+ROOT|SEF	7	/etc/ssh/ssh_config
+ROOT|SEF	7	/usr/libexec/ssh-keysign
+ROOT|SEF	7	/usr/libexec/sftp-server
+ROOT|SEF	7	/Library/LaunchDaemons/com.openssh.sshd.plist
+ROOT|ATT	10	/usr/lib/cycript0.9
+ROOT|ATT	10	/usr/lib/libcycript.dylib
+ROOT|ATT	10	/usr/lib/libcycript.0.dylib
+ROOT|ATT	10	/usr/lib/libcycript.jar
+ROOT|ATT	10	/usr/lib/libcycript.db
+ROOT|ATT	10	/usr/lib/libcycript.cy
+ROOT|ATT	10	/usr/bin/cycript
+ROOT|ATT	9	/Library/MobileSubstrate/
+ROOT|ATT	9	/Library/MobileSubstrate/MobileSubstrate.dylib
+ROOT|ATT	9	/Library/MobileSubstrate/DynamicLibraries/
+ROOT|ATT	9	/Library/Frameworks/CydiaSubstrate.framework/
+
+# https://github.com/Comsecuris/ios_dropbear/blob/master/debian/rules
+ROOT|SEF	7	/usr/sbin/dropbear
+ROOT|SEF	7	/usr/bin/dropbear
+ROOT|SEF	7	/usr/local/bin/dropbear
+ROOT|SEF	7	/etc/dropbear
+
+ROOT	8	/var/cache/apt/
+ROOT|HT	12	/var/cache/clutch.plist
+ROOT|HT	12	/var/cache/clutch_cracked.plist
+ROOT	8	/var/lib/apt/
+ROOT|HT	12	/var/lib/clutch/
+ROOT|HT	12	/var/lib/clutch/overdrive.dylib
+ROOT	8	/var/lib/cydia/
+ROOT	7	/var/log/syslog
+ROOT|HT	12	/var/root/Documents/Cracked/
+ROOT	7	/bin/bash
+ROOT	7	/bin/zsh
+ROOT	7	/bin/sh
+ROOT	8	/etc/apt/
+ROOT|HT	12	/etc/clutch.conf
+ROOT|HT	12	/etc/clutch_cracked.plist
+
+# pangu stuff - fuxiqin9, axe, xuanyuansword
+# http://apt.saurik.com/cydia/debs/fux/ - pangu fuxiqin9.1.2
+ROOT|SS	16	/pguntether
+ROOT|SS	16	/System/Library/LaunchDaemons/io.pangu.untether.plist
+ROOT|SS	16	/panguaxe
+ROOT|SS	16	/System/Library/LaunchDaemons/io.pangu.axe.untether.plist
+ROOT|SS	16	/usr/lib/pangu_xpcd.dylib
+ROOT|SS	16	/usr/lib/pangu_xpcd.ipod.dylib
+# False on IOS 10:
+#ROOT|SS	16	/System/Library/Caches/com.apple.xpcd/xpcd_cache.dylib
+#ROOT|SS	16	/System/Library/Caches/com.apple.xpcd/xpcd_cache.ipod.dylib
+ROOT|SS	16	/xuanyuansword
+
+# evasi0n stuff
+ROOT|SS	18	/evasi0n7
+ROOT|SS	18	/evasi0n7-installed
+ROOT|SS	18	/System/Library/LaunchDaemons/com.evad3rs.evasi0n7.untether.plist
+ROOT|SS	18	/var/libexec/dirhelper
+ROOT|SS	18	/var/evasi0n
+ROOT|SS	18	/var/evasi0n/evasi0n
+# from http://geohot.com/e7writeup.html:
+ROOT|SS	18	/var/mobile/Media/.evasi0n7-installed
+
+
+# from xcon (crack it open and see what it includes, plus what's in paths-deny)
+# ROOT	7	/usr/bin/codesign_allocate
+# http://apt.saurik.com/cydia/debs/04/:
+ROOT	11	/tmp/FlipSwitchCache
+ROOT|ATT|SS2	19	/Library/MobileSubstrate/DynamicLibraries/xCon.dylib
+ROOT|ATT|SS2	19	/Library/MobileSubstrate/DynamicLibraries/xCon.plist
+ROOT|ATT|SS2	19	/var/lib/xcon
+ROOT|ATT|SS2	19	/var/lib/xcon/dlsym-deny
+ROOT|ATT|SS2	19	/var/lib/xcon/fstab
+ROOT|ATT|SS2	19	/var/lib/xcon/paths-allow
+ROOT|ATT|SS2	19	/var/lib/xcon/paths-deny
+
+# http://bundlr.com/clips/52c2ee79fafd350369000308
+ROOT	7	/usr/bin/gssc
+ROOT	7	/usr/bin/uicache
+
+
+# ikee virus
+# http://thebackpackr.com/remove-the-ikee-virus-from-your-iphone/
+MAL	28	/System/Library/LaunchDaemons/com.ikey.bbot.plist
+MAL	28	/bin/poc-boot
+MAL	28	/var/lock/bbot.lock
+MAL	28	/var/log/youcanbeclosertogod.jpg
+
+# unflod virus
+# https://www.reddit.com/r/jailbreak/comments/23d990/instructions_from_saurik_for_anyone_with/
+MAL	29	/Library/MobileSubstrate/DynamicLibraries/Unflod.dylib
+MAL	29	/Library/MobileSubstrate/DynamicLibraries/Unflod.plist
+MAL	29	/Library/MobileSubstrate/DynamicLibraries/framework.dylib
+MAL	29	/Library/MobileSubstrate/DynamicLibraries/framework.plist
+
+# pegasus 0day jailbreak rootkit thingy
+# https://info.lookout.com/rs/051-ESQ-475/images/lookout-pegasus-technical-analysis.pdf
+MAL	57	/--early-boot
+MAL	57	/var/root/test.app
+MAL	57	/private/var/tmp/crw
+MAL	57	/private/var/tmp/cr
+MAL	57	/private/var/tmp/st_data
+
+
+# these files are all pulled out of cydia .debs downloaded from here: http://apt.saurik.com/cydia/debs/
+ROOT	7	/usr/bin/apt-get
+ROOT	7	/usr/lib/libapt-pkg.dylib
+ROOT	11	/System/Library/PreferenceBundles/WinterBoardSettings.bundle/
+ROOT	11	/Library/PreferenceLoader/Preferences/WinterBoardSettings.plist
+ROOT	11	/Library/PreferenceLoader/Preferences/Veency.plist
+ROOT	11	/System/Library/CoreServices/SpringBoard.app/Default_Veency.png
+ROOT|SS	14	/usr/share/ultrasn0w/
+ROOT|SS	14	/usr/share/ultrasn0w/ultrasn0w-xgold608.dylib
+ROOT|SS	17	/taig
+ROOT|SS	17	/taig/taig
+ROOT|SS	17	/Library/MobileSubstrate/DynamicLibraries/uicache83x.dylib
+ROOT|SEF	7	/usr/bin/sudo
+ROOT|SEF	7	/etc/sudoers
+ROOT|SEF	7	/usr/libexec/sudo_noexec.dylib
+ROOT	11	/usr/share/keyrings/saurik-keyring.gpg
+ROOT	11	/usr/share/keyrings/hackthatifone.com-keyring.gpg
+ROOT	7	/etc/ssl/openssl.cnf
+ROOT	7	/usr/lib/libssl.dylib
+ROOT	7	/usr/lib/libcrypto.dylib
+ROOT	7	/usr/bin/openssl
+ROOT|ATT	9	/usr/libexec/MSUnrestrictProcess
+ROOT|ATT	9	/Library/Frameworks/CydiaSubstrate.framework
+ROOT	7	/usr/bin/lsof
+ROOT|ATT	15	/usr/bin/ldid
+ROOT	7	/usr/bin/ipatcher
+ROOT	11	/usr/lib/libglib-2.0.dylib
+ROOT|ATT	15	/Library/Frameworks/WebCycript.framework
+ROOT|ATT	15	/Library/MobileSubstrate/DynamicLibraries/SimulatedKeyEvents.dylib
+ROOT|SS	14	/var/untether/_.dylib	p0sixspwn
+ROOT|SS	14	/var/untether/untether	p0sixspwn
+ROOT|SS	14	/System/Library/LaunchDaemons/jb.plist	greenpois0n
+ROOT|SS	14	/var/audit/rocky-racoon/remounter	greenpois0n
+ROOT|SS	14	/usr/share/corona/jb.plist	greenpois0n
+
+
+# gdb cydia deb
+ROOT|DBG	30	/usr/bin/gdb
+ROOT|DBG	31	/usr/bin/objdump
+ROOT|DBG	31	/usr/arm-apple-darwin9/bin/objdump
+ROOT|DBG	31	/usr/arm-apple-darwin9/bin/nm
+
+
+# saffron jailbreak:
+ROOT|SS	14	/boot/union_prelink.dylib
+ROOT|SS	14	/boot/white_loader
+ROOT|SS	14	/boot/untether
+
+# home depot & phoenix jailbreak:
+ROOT|SS	14	/.installed_home_depot
+
+# TODO: this causes dylib cache override, which is common in jailbreaks, but is it ever legit?
+ROOT|SEF	14	/System/Library/Caches/com.apple.dyld/enable-dylibs-to-override-cache
+
+ROOT|ATT	22	/private/var/mobile/Library/Preferences/com.isecpartners.nabla.SSLKillSwitchSettings.plist
+ROOT|DBG	25	/Library/MobileSubstrate/DynamicLibraries/PonyDebuggerInjectedBundle.bundle
+ROOT|DBG	25	/var/mobile/Library/Preferences/com.daapps.PonyDebuggerInjected.plist
+
+ROOT|ATT	23	/tmp/bf.log	iSpy
+
+# XModGames
+ROOT|GCT	55	/var/mobile/Library/XModGame/
+ROOT|GCT	55	/usr/libexec/XModCenter
+ROOT|GCT	55	/Library/MobileSubstrate/DynamicLibraries/XMHelper.dylib
+
+# GameGem
+ROOT|GCT	56	/Library/LaunchDaemons/com.tyc.tcscan.plist
+ROOT|GCT	56	/Applications/MemSearch.app/
+
+# TODO:
+# /Library/Frida/  # - pulled from frida source
+
+
+# Some misc IAP stuff
+#https://stackoverflow.com/questions/13325924/how-to-detect-locallapstore-new-iap-cracker?lq=1
+ROOT|IAP	58	/Library/MobileSubstrate/DynamicLibraries/LocalIAPStore.dylib
+ROOT|IAP	58	/Library/MobileSubstrate/DynamicLibraries/iap.dylib
+
+# Developer image mounted
+DEV	59	/Developer/Library/
+DEV	59	/Developer/usr/
+

@@ -1,0 +1,246 @@
+# Flags: 
+# AV - antivirus
+# EMM - emm/mam/devadmin
+# SS (security subversion) - rooting exploit (major impact)
+# SS2 (security subvsersion - lessor) - root hiding (minor impact)
+# EMU - emulator
+# ATT - app tampering tool
+# GCT - game cheat tool
+# HT - hacking tool
+# PGA - privilege granting app (su, etc.)
+# APF - app purchasing fraud tool
+# MAL - malware
+# AD - ad blocking tool
+# TEST - test/automation tool
+# NP - non-production/non-CTS/aftermarket 
+# y
+# z
+
+# Flag|Flag <tab> ID <tab> pkg <tab> nom # Notes
+
+# NOTE: AV has various IDs, for compliance requirement purposes
+AV	1	com.antivirus	AVG
+AV	1	org.antivirus	AVG
+AV	1	com.antivirus.tablet	AVG
+AV	1	org.antivirus.tablet	AVG
+AV	2	com.avast.android.mobilesecurity	AVAST
+AV	3	com.lookout	Lookout
+AV	4	com.symantec.mobilesecurity	Norton
+AV	5	com.avira.android	Avira
+AV	6	com.cleanmaster.security	CleanMaster
+AV	6	com.cleanmaster.mguard	CleanMaster
+AV	7	com.qihoo.security	Qihoo360
+AV	8	com.zrgiu.antivirus	NQ
+AV	9	com.wsandroid.suite	McAfee
+AV	10	com.drweb	DrWeb
+AV	11	com.trendmicro.tmmspersonal	TrendMicro
+AV	12	com.trustlook.antivirus	TrustLook
+AV	13	com.bitdefender.antivirus	BitDefender
+AV	14	com.eset.emms2.gp	ESET
+AV	15	com.kms.free	Kaspersky
+AV	15	com.kaspersky.kes	Kaspersky
+AV	16	com.sophos.smsec	Sophos
+AV	17	com.pandasecurtiy.pandaav	Panda
+AV	18	com.comodo.pimsecure	Comodo
+
+# NOTE: EMM/CORP has various IDs, for compliance requirement purposes
+EMM	300	com.airwatch.androidagent	Airwatch
+EMM	301	de.telekom.mdm	Deutsche Telekom
+EMM	302	com.tcx.mdm	2x
+EMM	303	com.fiberlink.maas360.android.control.samsung	MaaS360
+EMM	303	com.fiberlink.maas360.android.control.lg	MaaS360
+EMM	303	com.fiberlink.maas360.android.control	MaaS360
+EMM	304	com.amtel.mdm	Amtel
+EMM	305	com.trellianetworks.mdm	Trellia
+EMM	306	com.ahderom.better.mdm	Better
+EMM	307	com.mobileiron.workplace.android	MobileIron
+EMM	307	com.mobileiron.vodafone.miclient	MobileIron
+EMM	308	com.android.afaria	Afaria
+EMM	309	com.mcafee.apps.emmagent	McAfee
+EMM	310	com.samsung.knoxemm.mdm	Knox
+EMM	311	com.threelm.dm	Boxtone
+EMM	312	com.cellsec.mgmt	MobileSpaces
+EMM	313	com.vmware.view.client.android	VMWare
+EMM	313	com.vmware.mvp.hws	VMWare
+EMM	314	com.soti.mobicontrol.generic.installer	SOTI
+#
+EMM	320	com.good.android.gfe	Good
+EMM	320	com.good.gdgma	Good
+EMM	321	com.nitrodesk.honey.nitroid	Touchdown
+EMM	321	com.nitrodesk.touchdownpro	Touchdown
+EMM	321	com.nitrodesk.droid20.nitroid	Touchdown
+
+
+# NOTE: SS 500 is misc root apps:
+SS	14	com.corner23.android.universalandroot	root
+SS	14	com.mgyun.shua.su	root
+SS	14	com.zhiqupk.root	root
+SS	14	com.z4mod.z4root	root
+# give IDs to the bigger rooting apps:
+SS	79	com.baidu.easyroot	Baidu Root
+SS	71	com.alephzain.framaroot	Framaroot
+SS	80	com.kingoapp.root	KingoRoot
+SS	81	org.keenteam.pingpongroot	PingPongRoot
+SS	113	com.kingroot.kinguser	KingRoot
+
+HT	84	com.redphx.markethelper	Market Helper
+
+# all SU apps are 601:
+PGA	83	eu.chainfire.supersu	SuperSU
+PGA	83	eu.chainfire.supersu.pro	SuperSU
+PGA	83	com.noshufou.android.su	Superuser
+PGA	83	com.noshufou.android.su.elite	Superuser
+PGA	83	com.bitcubate.superuser.pro	superuser X
+PGA	83	com.bitcubate.android.su.installer	superuser X
+PGA	83	com.koushikdutta.superuser	SuperUser
+PGA	83	com.noshufou.android.su.fixer	Superuser Fixer
+PGA	83	com.kingouser.com	Kingo superuser
+PGA|EMU	83	com.genymotion.superuser	Genymotion
+
+# ROM managers are all 602:
+NP	82	com.koushikdutta.rommanager	ROM Manager 
+NP	82	com.koushikdutta.rommanager.license	ROM Manager
+NP	82	com.s0up.goomanager	ROM Manager
+NP	82	com.jrummy.apps.rom.installer	rom
+NP	82	com.jrummy.liberty.toolbox	rom
+NP	82	com.jrummy.liberty.toolboxpro	rom
+NP	82	eu.chainfire.mobileodin.pro	rom
+NP	82	com.jmz.soft.twrpmanager	rom
+NP	119	me.twrp.twrpapp	rom
+
+# xpose & substrate stand alone:
+ATT	73	de.robv.android.xposed.installer	Xpose
+ATT	9	com.saurik.substrate	Substrate
+
+# magisk qualifies in a few different ways
+SS	118	com.topjohnwu.magisk	Magisk
+
+
+# Root hiding apps are all 605:
+SS2	75	com.amphoras.hidemyroot	hide
+SS2	75	com.amphoras.hidemyrootadfree	hide
+SS2	75	org.projectvoodoo.otarootkeeper	hide
+SS2	75	com.troy1103.hideyourroot	hide
+SS2	75	com.rootbackupkeeper13_3	hide
+SS2	75	com.rootuninstaller.hider	hide
+SS2	75	com.rootuninstaller.hiderpro	hide
+SS2	75	com.dexterltd.root.hideapps	hide
+SS2	75	com.devadvance.rootcloak	hide
+SS2	75	com.devadvance.rootcloak2	hide
+SS2	75	com.devadvance.rootcloakplus	hide
+
+# this gives out root via adb, so it's like SU:
+PGA	85	eu.chainfire.adbd	ADBD Insecure
+
+
+# APK editing and cheat tools
+# TODO: should these be APF too?
+GCT|HT	86	com.felixheller.sharedprefseditor	cheat droid
+GCT|HT	86	com.felixheller.sharedprefseditor.pro	cheat droid
+GCT|HT	86	com.gmail.heagoo.apkeditor	apkeditor
+GCT|HT	86	com.gmail.heagoo.apkeditor.pro	
+GCT|HT	86	com.gmail.heagoo.appdm	Hack app data
+
+GCT	105	com.sidheinteractive.slf.dr	Game Guardian
+GCT	106	org.cheatengine.cegui	Cheat Engine
+GCT	86	org.jajaz.cheater_demo	Saved game editor
+GCT	86	com.n0n3m4.gltools	GLTools
+GCT|HT	86	org.paulbetts.runscopeeverything
+GCT	109	cn.mm.gk	Game Killer
+GCT	110	com.nanoo.darkswords	Game Guardian
+GCT	111	com.sbgamehacker	SB Game Hacker
+GCT	112	apps.zhasik007.hack	CreeHack
+HT|GCT	86	com.hexview.android.gamespector
+HT|GCT	86	pl.nyki.dax
+GCT	86	modded.haxplorer.bysparda
+GCT	114	com.cih.game_cih
+
+
+ATT	21	com.introspy.config
+ATT	21	com.introspy.core
+
+ATT	15	com.android.ssltrustkiller
+ATT	15	com.android.killpermandsigchecks
+ATT	15	com.android.opendebug
+ATT	15	com.isec.helperapp
+ATT	15	mobi.acpm.inspeckage
+ATT	15	mobi.acpm.sslunpinning
+ATT	15	just.trust.me
+ATT	15	com.pyler.xinstaller
+ATT	15	org.nanolx.securitybypasser
+ATT	15	itsforagoodcause.dontbeadick.nintendo
+
+HT	49	com.techfond.hackode
+
+# Default AndroRAT
+#x	x	my.app.client
+
+# From: https://github.com/AlmightyMegadeth00/AntiPiracySupport/blob/master/src/utils/AntiPiracyConstants.java
+APF|GCT	70	com.android.vending.billing.inappbillingservice.luck	Lucky patcher 5.8.x
+APF|GCT	70	com.android.vending.billing.inappbillingservice.lack	Lucky patcher 5.9.x
+APF|GCT	70	com.dimonvideo.luckypatcher	Lucky patcher
+APF|GCT	70	com.chelpus.lackypatch	Lucky patcher
+APF|GCT	70	com.forpda.lp	Lucky patcher
+APF|GCT	87	com.blackmartalpha	Black mart
+APF|GCT	87	org.blackmart.market	Black mart
+APF|GCT	87	cc.madkite.freedom	apf
+APF|GCT	87	cc.cz.madkite.freedom	apf
+APF|GCT	87	com.allinone.free	apf
+APF|GCT	87	com.repodroid.app	apf
+APF|GCT	87	org.creeplays.hack	apf
+APF|GCT	87	com.baseappfull.fwd	apf
+APF|GCT	87	com.zmapp	apf
+APF|GCT	87	com.dv.marketmod.installer	Hacked play store
+APF|GCT	87	org.mobilism.android	apf
+APF|GCT	87	com.marketunlocker.free	apf
+
+# piracy markets:
+APF|GCT	87	com.snappz.market	apf
+APF|GCT	87	com.appstore.vn	apf
+APF|GCT	87	com.gotoinit.apktor	apf
+APF|GCT	87	cm.aptoide.pt	apf
+
+# these are lucky patcher-ish from the market; we are just going to call them bad:
+APF|GCT	87	com.lucky.patcher	apf
+APF|GCT	87	com.luck.patch.cm	apf
+APF|GCT	87	com.raw.lupatpro	apf
+
+TEST	77	jp.co.cyberagent.stf	STF
+
+
+MAL	0	org.slempo.service	Koodous:Android.Bankosy
+MAL	0	com.software.application	Koodous:SmsSender
+MAL	0	duchm.sa	Koodous:Sms Sender
+MAL	0	com.qqmagic	Koodous:Locker ransomware qqmagic
+MAL	0	com.shiny4198471	Koodous:Shiny adware
+MAL	0	com.shiny5591007	Koodous:Shiny adware
+MAL	0	com.biotechnology.iclientsservice4	Koodous:iBanker
+MAL	0	com.biotechnology.iclientsservice7	Koodous:iBanker
+MAL	0	ru.android.apps	Koodous:sms_fraud-msacm32
+MAL	0	com.apps.android	Koodous:sms_fraud-msacm32
+MAL	0	com.googleapps.ru	Koodous:sms_fraud-msacm32
+MAL	0	net.os.android	Koodous:SMSreg.IE
+MAL	0	net.droidjack.sandorat	Koodous:sandorat
+MAL	0	com.alphadev.midlet.executor	Koodous:PlantsVsZombies
+MAL	0	com.fpt.alk	Koodous:FakeGoogleService
+MAL	0	net.droid.talk218	Koodous:Droidcollector
+MAL	0	installer.com.bithack.apparatus	Koodous:adware-installer
+MAL	0	org.google.app	Koodous:fakeinstaller
+MAL	0	vn.sologame.com	Koodous:sologame
+MAL	0	sologame.com.vn	Koodous:sologame
+MAL	0	kienbv89.sologame	Koodous:sologame
+MAL	0	com.tujtr.rtbrr	Koodous:package
+MAL	0	com.minitorrent.kimill	Koodus:fake market
+MAL	0	jk7h.pwcd	Koodous:installer
+MAL	0	my.app.client	Koodous:androrat
+
+
+EMU	93	com.android.emulator.smoketests	Emulator image
+EMU	97	com.ami.syncduosservices
+EMU	98	com.bignox.app.store.hd
+EMU	98	com.bignox.app.phone
+EMU	99	com.microvirt.market
+EMU	99	com.microvirt.memuime
+
+NP	101	org.cyanogenmod.bugreport
+NP	101	cyanogenmod.platform

@@ -1,0 +1,50 @@
+
+#PROPEXIST	16384
+#PROPVALNOT1	8192
+#PROPVALNOT0	4096
+
+PROPEXIST|EMU	96	andy.inited
+PROPEXIST|EMU	96	ro.andy.build.fingerprint
+PROPEXIST|EMU	96	ro.andy.version
+PROPEXIST|EMU	96	rw.andy.rotation
+
+
+PROPVALNOT1|SEF	63	ro.adb.secure
+PROPVALNOT0|SEF	64	ro.debuggable
+PROPVALNOT1|SEF	65	ro.secure
+PROPVALNOT0|NP	100	ro.build.version.preview_sdk
+PROPEXIST|NP	101	ro.cm.version
+PROPEXIST|NP	102	ro.rommanager.developerid
+PROPVALNOT0|EMU	93	ro.kernel.qemu
+
+PROPEXIST|EMU	91	init.svc.vbox86setup
+PROPEXIST|EMU	91	init.svc.vboxinit
+
+PROPEXIST|EMU	97	com.duos.power.status
+PROPEXIST|EMU	97	duos.env
+PROPEXIST|EMU	97	duos.version
+PROPEXIST|EMU	97	init.svc.duosconfig
+PROPVALNOT0|EMU	97	ro.kernel.duos
+
+PROPEXIST|EMU	98	debug.nox.network_ready
+PROPEXIST|EMU	98	init.svc.noxd
+PROPEXIST|EMU	98	nox.gles
+PROPEXIST|EMU	98	persist.nox.iso
+PROPEXIST|EMU	98	ro.nox.language
+
+PROPEXIST|EMU	99	init.svc.memud
+PROPEXIST|EMU	99	microvirt.gles
+PROPEXIST|EMU	99	microvirtd.ac.online
+PROPEXIST|EMU	99	ro.microvirt.hmac
+
+PROPEXIST|EMU	117	debug.droid4x.sd.scan
+PROPEXIST|EMU	117	droid4x.gles
+PROPEXIST|EMU	117	droid4x_version
+PROPEXIST|EMU	117	init.svc.droid4x
+PROPEXIST|EMU	117	ro.droid4x.did
+
+PROPEXIST|NP	118	init.svc.magisk_pfs
+PROPEXIST|NP	118	magisk.version
+PROPEXIST|NP	118	init.svc.magisk_service
+
+# SORTKEYS

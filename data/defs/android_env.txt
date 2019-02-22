@@ -1,0 +1,18 @@
+#
+# BOOTCLASS: thigns to strstr in bootclass (BOOTCLASSPATH and CLASSPATH)
+# LDPRELOAD: things to strstr in LD_PRELOAD
+# LDLIBPATH: things to strstr in LD_LIBRARY_PATH
+# ENVEXIST: the env var matches the full string
+#
+
+# flags <tab> id <tab> string <tab> notes
+BOOTCLASS|ATT	73	Xpose	Xpose framework
+BOOTCLASS|ATT	73	xpose	Xpose framework
+
+ENVEXIST|DBG	41	LD_TRACE_LOADED_OBJECTS	Debug
+ENVEXIST|DBG	74	ANDROID_WRAPSIM	http://androidxref.com/6.0.1_r10/xref/system/core/liblog/fake_log_device.c#659
+ENVEXIST|DBG	41	LD_DEBUG	http://androidxref.com/6.0.1_r10/xref/bionic/linker/linker.cpp#3158
+ENVEXIST|DBG	74	debug_db_uid	http://androidxref.com/6.0.1_r10/xref/art/runtime/runtime_linux.cc#356
+ENVEXIST|DBG	74	art_wait_for_gdb_on_crash	http://androidxref.com/6.0.1_r10/xref/art/runtime/runtime_linux.cc#356
+
+

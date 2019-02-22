@@ -1,0 +1,6 @@
+
+PROXY	1	PortSwigger
+PROXY	2	charlesproxy.com
+PROXY	3	DO_NOT_TRUST
+PROXY	4	filder2.com
+PROXY	5	WebScarab

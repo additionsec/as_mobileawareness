@@ -1,0 +1,29 @@
+# name <tab> flag
+
+# Common flags
+SS	1
+SS2	2
+ATT	4
+DBG	8
+ROOT	16
+SEF	32
+HT	64
+MAL	128
+ATD	256
+GCT	512
+IAP	1024
+DEV	2048
+
+# 0x8000 must be reserved, it has special meaning
+#RESERVED       32768
+
+# Symbols & hooks flags
+SYM_OBJC_CLASS	16384
+SYM_NATIVE	8192
+
+# for proxy section
+PROXY	1
+
+# Env flags
+DYLDLIB	16384
+ENVEXIST	8192

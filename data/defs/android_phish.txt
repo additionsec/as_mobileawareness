@@ -1,0 +1,59 @@
+# pkg <tab> label
+
+com.etsy.android	Etsy
+com.evernote	Evernote
+com.fiverr.fiverr	Fiverr
+com.ebay.mobile	eBay
+com.box.android	Box
+com.waze	Waze
+com.slack	Slack
+com.twitter.android	Twitter
+com.ubercab	Uber
+com.linkedin.android	LinkedIn
+com.snapchat.android	Snapchat
+com.runtastic.android	Runtastic
+com.adobe.air	Adobe AIR
+com.tinder	Tinder
+com.paypal.android.p2pmobile	PayPal
+com.paypal.here	PayPal Here
+com.skype.raider	Skype
+com.fitnesskeeper.runkeeper.pro	Runkeeper
+com.microsoft.office.excel	Excel
+com.microsoft.office.outlook	Outlook
+com.microsoft.office.powerpoint	PowerPoint
+com.microsoft.office.word	Word
+com.google.android.apps.walletnfcrel	Android Pay
+com.yelp.android	Yelp
+com.facebook.katana	Facebook
+com.facebook.moments	Moments
+org.mozilla.firefox	Firefox
+com.king.candycrushjellysaga	Candy Crush Jelly
+com.king.candycrushsaga	Candy Crush Saga
+com.king.candycrushsodasaga	Candy Crush Soda
+com.duolingo	Duolingo
+com.amazon.kindle	Amazon Kindle
+com.amazon.mp3	Amazon Music
+com.amazon.windowshop	Amazon
+com.groupon	Groupon
+com.epicwaronline.ms	Mobile Strike
+com.machinezone.gow	Game Of War
+com.pinterest	Pinterest
+com.bbm	BBM
+com.yahoo.mobile.client.android.mail	Yahoo Mail
+com.adobe.reader	Adobe Acrobat
+com.supercell.boombeach	Boom Beach
+com.instagram.android	Instagram
+co.vine.android	Vine
+com.tumblr	Tumblr
+com.netflix.mediaclient	Netflix
+com.contextlogic.wish	Wish
+com.hbo.hbonow	HBO NOW
+com.squareup.cash	Square Cash
+com.squareup	Square Register
+com.imangi.templerun	Temple Run
+com.gameloft.android.ANMP.GloftDMHM	Minion Rush
+com.gameloft.android.ANMP.GloftFWHM	Sniper Fury
+com.kiloo.subwaysurf	Subway Surf
+com.dropbox.android	Dropbox
+com.whatsapp	WhatsApp Messenger
+
